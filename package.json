@@ -1,0 +1,19 @@
+{
+  "name": "js-reforce",
+  "version": "1.0.0",
+  "description": "Repository to strengthen Javascript knowledge ⬆️",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorandresp/js-reforce.git"
+  },
+  "author": "Víctor Andrés Ponce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorandresp/js-reforce/issues"
+  },
+  "homepage": "https://github.com/victorandresp/js-reforce#readme"
+}

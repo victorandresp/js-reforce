@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Repository to strengthen Javascript knowledge ⬆️",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node --watch"
   },

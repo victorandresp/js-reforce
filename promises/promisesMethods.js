@@ -41,4 +41,8 @@ const rejectRace = new Promise((_, reject)=>{
 
 Promise.race([snail, cat, leopard, rejectRace])  // NOTE: if we pass a null value to race, it never complete the PROMISE
     .then(fastest => console.log(fastest))
+    
+// Promise.any
+Promise.any([snail, cat, leopard, rejectRace])  
+    .then(firstOnComplete => console.log(firstOnComplete))
 

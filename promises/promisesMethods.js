@@ -1,6 +1,6 @@
 // Promise.all
 const promiseToAllFirst = new Promise((resolve)=>{
-    setTimeout(() => resolve('First promise all'), 500)
+    setTimeout(() => resolve('First promise all'), 300)
 })
 
 const promiseToAllSecond = new Promise((resolve)=>{
@@ -23,3 +23,22 @@ Promise.allSettled([promiseToAllFirst, promiseToAllSecond, promiseToAllFailed])
     .then(res => {
         console.log('THEN', res)
     })
+// Promise.race
+const snail = new Promise((resolve)=>{
+    setTimeout(() => resolve('Snail'), 500)
+})
+
+const cat = new Promise((resolve)=>{
+    setTimeout(() => resolve('Cat'), 500)
+})
+
+const leopard = new Promise((resolve)=>{
+    setTimeout(() => resolve('Leopard'), 100)
+})
+const rejectRace = new Promise((_, reject)=>{
+    setTimeout(() => reject('REJECTED RACE'), 200)
+})
+
+Promise.race([snail, cat, leopard, rejectRace])  // NOTE: if we pass a null value to race, it never complete the PROMISE
+    .then(fastest => console.log(fastest))
+

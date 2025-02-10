@@ -5,6 +5,11 @@ const app = document.getElementById('app');
 
 const root = ReactDOM.createRoot(app)
 
-const Div = React.createElement('button', null, 'Test')
+const button1 = React.createElement('button', { "data-id": 1, "class": "btn" } , 'Button 1')
+const button2 = React.createElement('button', { "data-id": 2, "class": "btn" } , 'Button 2')
+const button3 = React.createElement('button', { "data-id": 3, "class": "btn" } , 'Button 3')
 
-root.render(Div)
+const container = React.createElement(React.Fragment, null, [button1, button2, button3])
+
+
+root.render(container)
